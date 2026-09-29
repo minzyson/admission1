@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>예술학부 실기고사 감사 주안점 안내 (10.2.)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F6F4; --surface:#FFFFFF; --ink:#1D242B; --muted:#5E6873; --line:#DDE1DF;
+  --seal:#A8322D; --pine:#2F5D50; --pine-soft:#E3EDE9;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15191D; --surface:#1D2227; --ink:#E6E9EC; --muted:#9AA4AE; --line:#2E353C;
+    --seal:#E0736B; --pine:#7FB8A6; --pine-soft:#1F3029;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15191D; --surface:#1D2227; --ink:#E6E9EC; --muted:#9AA4AE; --line:#2E353C;
+  --seal:#E0736B; --pine:#7FB8A6; --pine-soft:#1F3029;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:36px 20px 64px}
+.org{color:var(--muted);font-size:.92rem;margin:0}
+h1{font-size:clamp(1.55rem,4.6vw,2.1rem);line-height:1.3;margin:6px 0 14px;font-weight:700;letter-spacing:-0.02em}
+.who{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.95rem;color:var(--muted)}
+.who b{color:var(--ink);font-weight:600}
+a{color:var(--pine)}
+
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  display:flex;gap:4px;margin:28px -20px 0;padding:10px 20px;border-bottom:1px solid var(--line)}
+.tabs button{font:inherit;font-weight:600;font-size:1rem;padding:8px 18px;border-radius:8px;border:1px solid transparent;
+  background:none;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.tabs button:focus-visible{outline:3px solid var(--pine);outline-offset:2px}
+.tabs .time{font-weight:400;font-size:.85rem;margin-left:6px}
+
+section{margin-top:34px}
+h2{font-size:1.2rem;margin:0 0 12px;font-weight:700}
+h3{font-size:1.02rem;margin:26px 0 8px;font-weight:600}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 20px;margin:0;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.facts dt{color:var(--muted);font-size:.93rem}
+.facts dd{margin:0}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+th{font-weight:600;color:var(--muted);font-size:.85rem;background:var(--bg)}
+td.num{font-variant-numeric:tabular-nums}
+.note{font-size:.88rem;color:var(--muted);margin:8px 2px 0}
+
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.flow li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.flow b{display:block;font-weight:600}
+.flow span{font-size:.88rem;color:var(--muted)}
+.flow .arrow{background:none;border:none;min-width:0;padding:10px 2px;color:var(--muted);align-self:center;font-size:.85rem}
+
+.stage{margin-top:28px;padding-top:22px;border-top:2px solid var(--ink)}
+.stage h3{margin:0 0 4px;font-size:1.08rem;display:flex;gap:10px;align-items:baseline}
+.stage h3 span{color:var(--seal);font-variant-numeric:tabular-nums}
+.stage h4{margin:18px 0 6px;font-size:.98rem;font-weight:600}
+.stage ul{margin:0;padding-left:1.1em}
+.stage li{margin:4px 0;padding-left:2px}
+.stage li::marker{color:var(--muted)}
+.aside{font-size:.9rem;color:var(--muted);list-style:none;margin-left:-1.1em}
+
+.contact{margin-top:40px;padding:16px 20px;background:var(--pine-soft);border-radius:12px}
+.contact b{display:block;margin-bottom:2px}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  .wrap{padding:28px 16px 56px}
+  .tabs{margin:24px -16px 0;padding:10px 16px}
+  .tabs button{padding:8px 12px}
+  .facts{grid-template-columns:1fr;gap:2px}
+  .facts dd{margin-bottom:8px}
+  .flow .arrow{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="org">2027학년도 대학입학전형 공정관리대책위원회</p>
+  <h1>예술학부 실기고사 감사 주안점 안내</h1>
+  <div class="who">
+    <div>고사일 <b>2026. 10. 2.(금)</b></div>
+    <div>담당 위원 <b>오석영</b></div>
+    <div>전형본부 <b>권영은</b> <a href="tel:01029762978">010-2976-2978</a></div>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="고사 선택">
+    <button role="tab" id="t-music" aria-controls="music" aria-selected="true">음악<span class="time">09:00~12:00</span></button>
+    <button role="tab" id="t-art" aria-controls="art" aria-selected="false">미술<span class="time">10:00~14:00</span></button>
+  </nav>
+
+  <!-- ================= 음악 ================= -->
+  <div id="music" role="tabpanel" aria-labelledby="t-music">
+    <section>
+      <h2>고사 개요</h2>
+      <dl class="facts">
+        <dt>고사명</dt><dd>예술학부(음악) 실기고사</dd>
+        <dt>고사 일시</dt><dd>2026. 10. 2.(금) 09:00~12:00</dd>
+        <dt>지원 현황</dt><dd>피아노 · 모집 9명 / 지원 27명</dd>
+        <dt>대기장</dt><dd>29호관 209호</dd>
+        <dt>실기고사장</dt><dd>29호관 201호(연주홀)</dd>
+        <dt>연습실</dt><dd>29-202~206호</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>고사장 감독관</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>구분</th><th>장소</th><th>위치</th><th>성명</th><th>연락처</th></tr></thead>
+        <tbody>
+          <tr><td>고사장</td><td>29-201호</td><td>연주홀</td><td>서보호</td><td><a href="tel:01022056725">010-2205-6725</a></td></tr>
+          <tr><td>대기장</td><td>29-209호</td><td>대기실</td><td>이채훈</td><td><a href="tel:01057361219">010-5736-1219</a></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>실기 진행 흐름</h2>
+      <ol class="flow">
+        <li><b>대기</b><span>전공별 대기실</span></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li><b>연주번호 추첨</b><span>전공별 대기실</span></li>
+        <li class="arrow" aria-hidden="true">보고 후 이동 →</li>
+        <li><b>연습 10분</b><span>연습실</span></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li><b>대기</b><span>실기고사실</span></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li><b>실기고사</b><span>고사장</span></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li><b>고사 종료</b><span>퇴실</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>감사 활동 시 주안점</h2>
+
+      <div class="stage">
+        <h3><span>1</span>실기고사 시작 전</h3>
+        <h4>평가위원 배치 및 독립채점 환경</h4>
+        <ul>
+          <li>평가위원이 지정된 자리에 착석하여 채점하는지</li>
+          <li>평가위원 간 칸막이 설치 또는 일정 거리 유지가 이루어졌는지</li>
+          <li>평가위원 상호 간 점수 공유, 불필요한 대화, 수험생에 대한 신호 제공이 없는지</li>
+          <li>평가위원이 채점 방법 및 유의사항을 사전에 전달받고 고사에 임하는지</li>
+        </ul>
+        <h4>수험생 본인확인 및 연주번호 관리</h4>
+        <ul>
+          <li>수험표 및 신분증 확인 절차가 엄격히 이루어지는지</li>
+          <li>보조대장에 신분증 지참 여부, 수험생 서명 등이 정확히 기재되는지</li>
+          <li>연주번호 추첨이 정해진 절차에 따라 이루어지는지</li>
+          <li>평가위원에게 수험생 성명, 수험번호 등 불필요한 신원정보가 노출되지 않는지</li>
+        </ul>
+        <h4>지각생 및 결시자 처리</h4>
+        <ul>
+          <li>연주번호 추첨 시간 이후 도착한 수험생을 결시 처리하는지</li>
+          <li>추첨 시 부재한 수험생은 운영보조학생 또는 감독관이 대신 추첨하고, 이기표 비고란에 '결시'로 기재하는지</li>
+          <li>지각생에게 예외적으로 응시 기회를 부여하는 사례가 없는지</li>
+        </ul>
+        <h4>전자기기 관리 및 부정행위 예방</h4>
+        <ul>
+          <li>휴대폰, 태블릿PC, 스마트워치 등 전자기기 전원 OFF 및 보관봉투 보관이 실제로 이루어지는지</li>
+          <li>대기장 및 고사장 내 전자기기 사용 금지 안내가 충분한지</li>
+          <li>전자기기 사용 적발 시 부정행위 및 전형제외 처리 기준이 안내되는지</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h3><span>2</span>실기고사 진행</h3>
+        <h4>연주번호 중심 운영</h4>
+        <ul>
+          <li>진행요원이 평가위원에게 "연주번호 00번 연주 준비되었습니다."라고 안내하는지</li>
+          <li>평가위원에게 수험생의 성명이나 수험번호가 전달되지 않는지</li>
+          <li>연주번호 순서에 따라 고사가 진행되는지</li>
+        </ul>
+        <h4>평가 및 채점 기준 적용의 공정성</h4>
+        <ul>
+          <li>평가위원이 정해진 채점기준에 따라 독립적으로 평가하는지</li>
+          <li>평가위원 3명의 채점점수 평균을 취득점수로 반영하는 기준이 준수되는지</li>
+          <li>연주 중단이 필요한 경우, 평가위원 판단에 따라 일관되게 적용되는지</li>
+          <li>특정 수험생에게만 유리하거나 불리하게 연주시간, 중단 시점, 진행 방식이 달리 적용되지 않는지</li>
+        </ul>
+        <h4>감독관 및 진행요원 역할 수행</h4>
+        <ul>
+          <li>감독관 1명은 대기장, 1명은 고사장 내 대기실에 상주하는지</li>
+          <li>감독관 및 진행요원이 정위치에서 맡은 업무를 수행하는지</li>
+          <li>수험생이 특별한 사유 없이 대기장 외부로 이탈하지 않도록 관리하는지</li>
+          <li>녹음 중 불필요한 음성이나 대화가 녹음되지 않도록 관리하는지</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h3><span>3</span>실기고사 종료 및 채점</h3>
+        <h4>채점 입력의 적정성</h4>
+        <ul>
+          <li>평가위원이 지급받은 태블릿PC에 직접 채점점수를 입력하는지</li>
+          <li>채점 완료 전 입력점수를 확인하는 절차가 이루어지는지</li>
+          <li>완료 버튼 입력 후 점수 수정이 불가하다는 사항을 평가위원이 인지하고 있는지</li>
+          <li>채점위원에게 채점 완료 여부를 확인한 후 고사가 마무리되는지</li>
+        </ul>
+        <h4>결시·중도포기자 처리</h4>
+        <ul>
+          <li>미응시 수험생을 불합격 또는 결시 기준에 따라 처리하는지</li>
+          <li>결시생은 진행요원이 "연주번호 00번 결시"라고 평가위원에게 통지하고, 이기표 비고란에 '결시'로 표시하는지</li>
+          <li>중도포기 희망 수험생에게 확인서 작성, 서명 및 전형제외 사실 고지를 실시하는지</li>
+          <li>실기고사 결과보고서에 결시 및 중도포기 사항이 명확히 기재되는지</li>
+        </ul>
+        <h4>고사 종료 후 관리</h4>
+        <ul>
+          <li>수험생 퇴실 및 이동 과정에서 민원·분쟁 발생 소지가 없는지</li>
+          <li>고사장 및 대기장 내 잔류 인원 관리가 적절한지</li>
+          <li>고사 관련 물품 및 서류가 입학관리팀으로 정확히 제출되는지</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= 미술 ================= -->
+  <div id="art" role="tabpanel" aria-labelledby="t-art" hidden>
+    <section>
+      <h2>고사 개요</h2>
+      <dl class="facts">
+        <dt>고사명</dt><dd>예술학부(미술) 실기고사</dd>
+        <dt>실기고사</dt><dd>2026. 10. 2.(금) 10:00~14:00</dd>
+        <dt>채점</dt><dd>2026. 10. 2.(금) 15:00~16:00</dd>
+        <dt>지원 현황</dt><dd>모집 29명 / 지원 107명 (경쟁률 3.69:1)</dd>
+        <dt>평가위원</dt><dd>본교 2명, 타 대학 1명</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>고사장 및 감독관</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>고사장</th><th>실기과목</th><th>인원</th><th>자리추첨</th><th>제출장소</th><th>감독관</th></tr></thead>
+        <tbody>
+          <tr><td>6-102</td><td>인물두상소조</td><td class="num">7</td><td>◯</td><td>6-102</td><td>마재경 <a href="tel:01050906889">010-5090-6889</a><br>이재원 <a href="tel:01025092480">010-2509-2480</a></td></tr>
+          <tr><td>6-108</td><td>인체묘사(데생)</td><td class="num">1</td><td>-</td><td>28-702</td><td>박정재 <a href="tel:01071513450">010-7151-3450</a></td></tr>
+          <tr><td>6-308</td><td>기초디자인</td><td class="num">32</td><td>-</td><td>28-602</td><td>강성모 <a href="tel:01046928625">010-4692-8625</a><br>정민수 <a href="tel:01097604056">010-9760-4056</a></td></tr>
+          <tr><td>6-404</td><td>정밀묘사</td><td class="num">16</td><td>-</td><td>28-602</td><td>이은호 <a href="tel:01068761896">010-6876-1896</a><br>박선준 <a href="tel:01038739692">010-3873-9692</a></td></tr>
+          <tr><td>28-601</td><td>정물묘사(데생/수채화)</td><td class="num">14 (6/8)</td><td>◯</td><td>28-702</td><td>박승련 <a href="tel:01039011366">010-3901-1366</a><br>한분선 <a href="tel:01096642354">010-9664-2354</a></td></tr>
+          <tr><td>28-602</td><td>인체묘사(데생)</td><td class="num">11</td><td>◯</td><td>28-702</td><td>양창섭 <a href="tel:01025778037">010-2577-8037</a><br>이태호 <a href="tel:01091436796">010-9143-6796</a></td></tr>
+          <tr><td>28-701</td><td>인체묘사(수채화)</td><td class="num">16</td><td>◯</td><td>28-702</td><td>최형택 <a href="tel:01031076682">010-3107-6682</a><br>박수철 <a href="tel:01033730327">010-3373-0327</a></td></tr>
+          <tr><td>28-702</td><td>인체묘사(수채화)</td><td class="num">10</td><td>◯</td><td>28-702</td><td>박미랑 <a href="tel:01038305067">010-3830-5067</a><br>이상훈 <a href="tel:01093574108">010-9357-4108</a></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>채점 장소</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>채점장소</th><th>채점작품</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td>6-102</td><td>인물두상소조 7점</td><td>작업대에 붙여진 채로 채점</td></tr>
+          <tr><td>28-602</td><td>기초디자인 32점<br>정밀묘사 16점</td><td rowspan="2">화판에 붙여진 채로 이젤 위에 올려놓고 채점</td></tr>
+          <tr><td>28-702</td><td>정물묘사 14점<br>인체묘사 38점</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>감사 활동 시 주안점</h2>
+
+      <div class="stage">
+        <h3><span>1</span>실기고사 시작 전</h3>
+        <h4>고사장 운영 준비</h4>
+        <ul>
+          <li>감독관 및 진행요원이 지정된 시간까지 고사장에 배치되어 있는지</li>
+          <li>종목별 고사장, 좌석·작업대·이젤 및 화지 규격이 사전 계획과 일치하는지</li>
+          <li>자리추첨 대상 종목은 정해진 방식으로 추첨하고, 비대상 종목은 지정 좌석에 착석하는지</li>
+          <li>실기 제시물 및 모델이 정해진 시간과 절차에 따라 준비·배부되는지</li>
+        </ul>
+        <h4>수험생 본인확인 및 답안지 관리</h4>
+        <ul>
+          <li>수험표 및 신분증 확인이 정확히 이루어지는지</li>
+          <li>화지의 수험번호와 실제 수험생의 수험번호·신분증 사진이 일치하는지</li>
+          <li>그림 그리는 면 우측 상단에 감독관 검인 스티커, 뒷면 우측 상단에 수험번호 스티커가 적정하게 부착되는지</li>
+          <li>그림 그리는 면에 수험번호·성명 등 신원정보가 기재되지 않는지</li>
+        </ul>
+        <h4>전자기기 및 부정행위 예방</h4>
+        <ul>
+          <li>휴대폰 등 전자기기 전원이 꺼진 상태로 보관봉투에 보관되는지</li>
+          <li>참고자료, 화첩, 사진 등 반입 금지 물품 관리가 적절한지</li>
+          <li>부정행위 유형 및 전형제외 기준이 수험생에게 사전에 안내되는지</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h3><span>2</span>실기고사 진행</h3>
+        <h4>좌석 및 응시조건의 동일 적용</h4>
+        <ul>
+          <li>지정좌석 또는 추첨좌석이 임의로 변경되지 않는지</li>
+          <li>허용된 경우를 제외하고 고사 시작 후 1시간 이내 자리 이탈이 없는지</li>
+          <li>화장실 출입 시 진행요원이 동행하고 재입실 시 본인확인이 이루어지는지</li>
+          <li>종목별 지원자 1명인 경우 등 예외적인 자리 이동이 기준에 따라 제한적으로 허용되는지</li>
+        </ul>
+        <h4>종목별 실기조건의 공정성</h4>
+        <ul>
+          <li>인체묘사는 지정된 자리에서 실제 보이는 방향대로 묘사하는지</li>
+          <li>정물묘사는 정물을 정물대 밖으로 이동시키지 않고 지정된 위치를 기준으로 실시하는지</li>
+          <li>인물두상소조 및 인체묘사 모델의 포즈·회전·휴식시간이 정해진 기준대로 운영되는지</li>
+          <li>기초디자인·정밀묘사 제시물이 모든 수험생에게 동일 조건으로 제공되는지</li>
+          <li>화지·실기재료 교환 제한 및 허용도구 기준이 모든 수험생에게 동일하게 적용되는지</li>
+        </ul>
+        <h4>감독관 검인 및 현장 감독</h4>
+        <ul>
+          <li>감독관 검인이 고사 시작 직후, 1시간 경과 후, 3시간 경과 후 총 3회 이루어지는지</li>
+          <li>감독관이 수험생 본인, 수험번호 및 화지의 수험번호를 정확히 대조하는지</li>
+          <li>작품 모방, 불필요한 대화, 무단 좌석 변경, 답안지 교환 등 부정행위가 적절히 통제되는지</li>
+          <li>수험생·감독관·진행요원·입학처 관계자 외 외부인의 출입이 통제되는지</li>
+        </ul>
+        <h4>지각·중도포기·부정행위 처리</h4>
+        <ul>
+          <li>고사 시작 30분 이후 도착한 수험생을 결시 처리하는지</li>
+          <li>결시자의 화지에 '결시' 표시가 정확히 이루어지는지</li>
+          <li>고사 시작 2시간 이전 중도포기자는 확인서 작성, 서명 및 전형제외 사실 고지 후 퇴실시키는지</li>
+          <li>부정행위자는 답안지를 즉시 회수하고 부정행위 확인서 작성 및 화지에 '부정' 표시를 하는지</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h3><span>3</span>실기고사 종료 및 채점</h3>
+        <h4>답안지 회수 및 신원정보 차단</h4>
+        <ul>
+          <li>실기 종료 후 답안지를 화판·테이블에 그대로 두고 수험생이 임의로 반출하지 않는지</li>
+          <li>종료 후 작품 촬영 금지 원칙이 준수되는지</li>
+          <li>수험번호 기재 부분을 가리개 스티커로 가린 후 서명하는지</li>
+          <li>답안지 수량이 총원과 일치하는지</li>
+          <li class="aside">※ 결시·중도포기 답안지도 포함하여 수량 확인</li>
+        </ul>
+        <h4>작품 익명화 및 채점의 독립성</h4>
+        <ul>
+          <li>채점 전 작품에 무순위 작품관리번호가 부여되는지</li>
+          <li>평가위원이 수험생 신원을 알 수 없는 상태에서 채점하는지</li>
+          <li>평가위원 상호 간 일정 거리를 유지하고 불필요한 대화 없이 독립적으로 채점하는지</li>
+          <li>인물두상소조는 앞·뒤·좌·우 4방향 사진촬영 완료 후 채점하는지</li>
+        </ul>
+        <h4>채점기준 및 점수처리</h4>
+        <ul>
+          <li>모든 종목을 100점 기준, 최저점수 30점으로 채점하는지</li>
+          <li>평가위원 3명의 점수를 합산한 평균점을 취득점수로 반영하는지</li>
+          <li>평가위원이 전산에 직접 점수를 입력하는지</li>
+          <li>완료 버튼 입력 전 최종 점수를 확인하고, 완료 후 수정 불가 절차가 준수되는지</li>
+          <li>채점 완료 후 출력된 채점표의 최종 점수를 확인·서명하여 전형본부에 제출하는지</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="contact">
+    <b>전형본부(입학관리팀) 문의처</b>
+    권영은 <a href="tel:01029762978">010-2976-2978</a>
+  </div>
+</div>
+
+<script>
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function show(id,push){
+  tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;
+    t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});
+  if(push) history.replaceState(null,'','#'+id);
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click',()=>show(t.getAttribute('aria-controls'),true));
+  t.addEventListener('keydown',e=>{
+    if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+    const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
+    n.focus();show(n.getAttribute('aria-controls'),true);});
+});
+if(location.hash==='#art')show('art');
+</script>
+</body>
+</html>
